@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BaratoStore</title>
   <style>
     body {
@@ -12,7 +12,7 @@
       background: #f7f7f7;
     }
     header {
-      background: #007bff; /* Azul */
+      background: #000;
       color: #fff;
       padding: 20px;
       text-align: center;
@@ -35,8 +35,9 @@
     .product img {
       width: 100%;
       height: 180px;
-      object-fit: contain;
+      object-fit: cover;
       margin-bottom: 10px;
+      border-radius: 6px;
     }
     .buy-button {
       background-color: #28a745;
@@ -55,14 +56,6 @@
       background: #eee;
       margin-top: 20px;
     }
-    footer a {
-      color: #007bff;
-      text-decoration: none;
-      margin: 0 5px;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
@@ -74,63 +67,45 @@
   <div class="container">
     <div class="products">
       <div class="product">
-        <img src="https://via.placeholder.com/250x180?text=Audifonos+BT" alt="Audífonos" />
+        <img src="imagenes/audifonos.jpg" alt="Audífonos" />
         <h3>Audífonos Bluetooth</h3>
         <p>S/. 35.00</p>
         <button class="buy-button" onclick="buy('Audífonos Bluetooth')">Comprar</button>
       </div>
       <div class="product">
-        <img src="https://via.placeholder.com/250x180?text=Aro+de+Luz" alt="Aro de luz" />
+        <img src="imagenes/aro_luz.jpg" alt="Aro de Luz" />
         <h3>Aro de Luz para Selfies</h3>
         <p>S/. 25.00</p>
         <button class="buy-button" onclick="buy('Aro de Luz')">Comprar</button>
       </div>
       <div class="product">
-        <img src="https://via.placeholder.com/250x180?text=Soporte+Celular" alt="Soporte" />
+        <img src="imagenes/soporte.jpg" alt="Soporte de Celular" />
         <h3>Soporte de Celular</h3>
         <p>S/. 10.00</p>
         <button class="buy-button" onclick="buy('Soporte de Celular')">Comprar</button>
       </div>
       <div class="product">
-        <img src="https://via.placeholder.com/250x180?text=Mini+Parlante" alt="Parlante" />
+        <img src="imagenes/parlante.jpg" alt="Parlante Bluetooth" />
         <h3>Mini Parlante Bluetooth</h3>
         <p>S/. 30.00</p>
         <button class="buy-button" onclick="buy('Mini Parlante Bluetooth')">Comprar</button>
       </div>
       <div class="product">
-        <img src="https://via.placeholder.com/250x180?text=Smartwatch" alt="Smartwatch" />
+        <img src="imagenes/smartwatch.jpg" alt="Smartwatch Juvenil" />
         <h3>Smartwatch Juvenil</h3>
         <p>S/. 60.00</p>
         <button class="buy-button" onclick="buy('Smartwatch Juvenil')">Comprar</button>
-      </div>
-
-      <!-- Nuevo producto agregado -->
-      <div class="product">
-        <img src="https://via.placeholder.com/250x180?text=Cargador+Portátil" alt="Cargador Portátil" />
-        <h3>Cargador Portátil</h3>
-        <p>S/. 50.00</p>
-        <button class="buy-button" onclick="buy('Cargador Portátil')">Comprar</button>
       </div>
     </div>
   </div>
 
   <footer>
-    <p>
-      Contacto por WhatsApp:
-      <a href="https://wa.me/51969983025">+51 969 983 025</a> | Yape: 969 983 025
-    </p>
-    <p>
-      Síguenos en:
-      <a href="https://facebook.com/tuusuario" target="_blank" rel="noopener noreferrer">Facebook</a> |
-      <a href="https://instagram.com/tuusuario" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </p>
+    <p>Contacto por WhatsApp: <a href="https://wa.me/51969983025">+51 969 983 025</a> | Yape: 969 983 025</p>
   </footer>
 
   <script>
     function buy(productName) {
-      const phone = "51969983025"; // Número con código país Perú
-      const message = encodeURIComponent(`Hola, quiero comprar: ${productName}`);
-      window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+      alert(`Gracias por tu interés en "${productName}". Para completar la compra, realiza el pago vía Yape al número 969 983 025 y envíanos el comprobante por WhatsApp.`);
     }
   </script>
 </body>
