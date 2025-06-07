@@ -6,7 +6,7 @@
   <title>BaratoStore</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
       background: #121212;
@@ -14,17 +14,15 @@
     }
     header {
       background: #000;
-      color: #fff;
       padding: 30px 20px;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     }
     header h1 {
       margin: 0;
       font-size: 2.5rem;
     }
     header p {
-      font-size: 1rem;
       margin-top: 10px;
       color: #ccc;
     }
@@ -33,18 +31,25 @@
       max-width: 1200px;
       margin: auto;
     }
+    .section-title {
+      font-size: 1.8rem;
+      margin: 40px 0 20px;
+      color: #90ee90;
+      border-bottom: 2px solid #90ee90;
+      padding-bottom: 10px;
+    }
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
     }
     .product {
-      background: #1f1f1f;
+      background: #1e1e1e;
       padding: 15px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.2s;
     }
     .product:hover {
       transform: scale(1.03);
@@ -53,92 +58,114 @@
       width: 100%;
       height: 180px;
       object-fit: cover;
-      margin-bottom: 10px;
       border-radius: 8px;
-    }
-    .product h3 {
-      margin: 10px 0 5px;
-      font-size: 1.2rem;
-    }
-    .product p {
-      color: #90ee90;
-      font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
     .buy-button {
       background-color: #28a745;
       color: white;
-      padding: 10px 20px;
+      padding: 10px 18px;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
+      font-weight: bold;
     }
     .buy-button:hover {
-      background-color: #1e7e34;
+      background-color: #218838;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background: #000;
-      color: #aaa;
-      font-size: 0.9rem;
+      background: #1a1a1a;
+      color: #ccc;
     }
-    footer a {
+    a {
       color: #90ee90;
       text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>BaratoStore</h1>
-    <p>Accesorios a precios más bajos que regalado.</p>
+    <p>Productos tecnológicos, accesorios y skincare a precios más bajos que regalado. ¡Ayúdame a salvar a mi abuelito con cáncer!</p>
   </header>
 
   <div class="container">
+    
+    <!-- Tecnología -->
+    <h2 class="section-title">Tecnología</h2>
     <div class="products">
       <div class="product">
-        <img src="audifonos.webp" alt="Audífonos" />
+        <img src="https://via.placeholder.com/250x180?text=Audifonos" alt="Audífonos" />
         <h3>Audífonos Bluetooth</h3>
         <p>S/. 35.00</p>
-        <a class="buy-button" href="https://wa.me/51969983025?text=Hola%2C%20quiero%20comprar%20Audífonos%20Bluetooth" target="_blank">Comprar</a>
+        <button class="buy-button" onclick="buy('Audífonos Bluetooth')">Comprar</button>
       </div>
       <div class="product">
-        <img src="aro de luz.webp" alt="Aro de Luz" />
-        <h3>Aro de Luz para Selfies</h3>
-        <p>S/. 25.00</p>
-        <a class="buy-button" href="https://wa.me/51969983025?text=Hola%2C%20quiero%20comprar%20Aro%20de%20Luz%20para%20Selfies" target="_blank">Comprar</a>
-      </div>
-      <div class="product">
-        <img src="soporte de celular.webp" alt="Soporte de Celular" />
-        <h3>Soporte de Celular</h3>
-        <p>S/. 10.00</p>
-        <a class="buy-button" href="https://wa.me/51969983025?text=Hola%2C%20quiero%20comprar%20Soporte%20de%20Celular" target="_blank">Comprar</a>
-      </div>
-      <div class="product">
-        <img src="mini parlante bluetooth.webp" alt="Parlante Bluetooth" />
+        <img src="https://via.placeholder.com/250x180?text=Parlante" alt="Parlante" />
         <h3>Mini Parlante Bluetooth</h3>
         <p>S/. 30.00</p>
-        <a class="buy-button" href="https://wa.me/51969983025?text=Hola%2C%20quiero%20comprar%20Mini%20Parlante%20Bluetooth" target="_blank">Comprar</a>
+        <button class="buy-button" onclick="buy('Mini Parlante Bluetooth')">Comprar</button>
       </div>
       <div class="product">
-        <img src="smart watch.webp" alt="Smartwatch Juvenil" />
+        <img src="https://via.placeholder.com/250x180?text=Smartwatch" alt="Smartwatch" />
         <h3>Smartwatch Juvenil</h3>
         <p>S/. 60.00</p>
-        <a class="buy-button" href="https://wa.me/51969983025?text=Hola%2C%20quiero%20comprar%20Smartwatch%20Juvenil" target="_blank">Comprar</a>
+        <button class="buy-button" onclick="buy('Smartwatch Juvenil')">Comprar</button>
       </div>
     </div>
+
+    <!-- Accesorios -->
+    <h2 class="section-title">Accesorios</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/250x180?text=Aro+de+Luz" alt="Aro de luz" />
+        <h3>Aro de Luz para Selfies</h3>
+        <p>S/. 25.00</p>
+        <button class="buy-button" onclick="buy('Aro de Luz')">Comprar</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x180?text=Soporte+Celular" alt="Soporte" />
+        <h3>Soporte de Celular</h3>
+        <p>S/. 10.00</p>
+        <button class="buy-button" onclick="buy('Soporte de Celular')">Comprar</button>
+      </div>
+    </div>
+
+    <!-- Moda y Cuidado Personal -->
+    <h2 class="section-title">Moda y Cuidado Personal</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/250x180?text=Mascarilla+Facial" alt="Mascarilla" />
+        <h3>Mascarilla Facial Hidratante</h3>
+        <p>S/. 8.00</p>
+        <button class="buy-button" onclick="buy('Mascarilla Facial')">Comprar</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x180?text=Crema+Manos" alt="Crema de manos" />
+        <h3>Crema de Manos con Aloe</h3>
+        <p>S/. 12.00</p>
+        <button class="buy-button" onclick="buy('Crema de Manos')">Comprar</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x180?text=Set+Skincare" alt="Set Skincare" />
+        <h3>Set Skincare Económico</h3>
+        <p>S/. 25.00</p>
+        <button class="buy-button" onclick="buy('Set Skincare')">Comprar</button>
+      </div>
+    </div>
+
   </div>
 
   <footer>
-    <p>Contacto por WhatsApp: <a href="https://wa.me/51969983025">+51 969 983 025</a> | Yape: 969 983 025</p> 
-  <p> Esto y muchos mas productos a todo el Perú, tambien productos a pedido del cliente a precios bajos.
+    <p>Contacto por WhatsApp: <a href="https://wa.me/51969983025">+51 969 983 025</a> | Yape: 969 983 025</p>
   </footer>
+
+  <script>
+    function buy(productName) {
+      window.open(`https://wa.me/51969983025?text=Hola! Estoy interesado en comprar: ${encodeURIComponent(productName)} desde BaratoStore.`, '_blank');
+    }
+  </script>
 </body>
 </html>
