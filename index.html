@@ -1,85 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BaratoStore - Tecnología para Todos</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BaratoStore | Accesorios con estilo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" crossorigin="anonymous"/>
   <style>
+    :root {
+      --main-bg: #1B1C1D;
+      --highlight: #E8FF77;
+      --text-light: #FBFBF8;
+      --accent: #C295E9;
+      --success: #40C5AE;
+    }
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #1a202c;
-      color: #f7fafc;
+      background-color: var(--main-bg);
+      color: var(--text-light);
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
     }
-    .dark-bg {
-      background-color: #2d3748;
+    header {
+      background-color: #000;
+      padding: 60px 20px;
+      text-align: center;
     }
-    .highlight {
-      color: #63b3ed;
+    header h1 {
+      font-family: 'Rebond', sans-serif;
+      font-size: 50px;
+      margin-bottom: 10px;
     }
-    .btn-primary {
-      background-color: #805ad5;
-      color: white;
+    header p {
+      font-size: 20px;
+      color: #DDD8C2;
     }
-    .btn-primary:hover {
-      background-color: #6b46c1;
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 60px 20px;
+    }
+    .product-card {
+      background-color: #000000;
+      color: var(--text-light);
+      border-radius: 20px;
+      padding: 40px 20px;
+      width: 300px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 25px 0 #E8FF7799;
+    }
+    .product-card:hover {
+      background-color: var(--accent);
+      color: var(--main-bg);
+    }
+    .product-card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .product-card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .product-card p {
+      font-size: 20px;
+      color: var(--highlight);
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .buy-button {
+      display: inline-block;
+      font-size: 16px;
+      padding: 10px 24px;
+      background: var(--success);
+      color: var(--text-light) !important;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .buy-button:hover {
+      background: var(--highlight);
+      color: var(--main-bg) !important;
+    }
+    footer {
+      background: #000;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #AAA;
+    }
+    footer a {
+      color: var(--highlight);
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <!-- Encabezado -->
-  <header class="dark-bg shadow p-4">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold highlight">BaratoStore</h1>
-      <nav>
-        <a href="#productos" class="mr-4 hover:underline">Productos</a>
-        <a href="https://wa.me/51969983025?text=Me%20interesa%20comprar%20este%20producto." class="btn-primary px-4 py-2 rounded">Contáctanos</a>
-      </nav>
-    </div>
+  <header>
+    <h1>BaratoStore</h1>
+    <p>Accesorios a precios más bajos que regalado</p>
   </header>
-
-  <!-- Hero -->
-  <section class="dark-bg p-8 text-center">
-    <h2 class="text-3xl font-bold mb-4">Tecnología al mejor precio</h2>
-    <p class="mb-6">Explora productos modernos, asequibles y de calidad. ¡No esperes más!</p>
-    <a href="https://wa.me/51969983025?text=Me%20interesa%20comprar%20este%20producto." class="btn-primary px-6 py-3 rounded text-lg inline-block">Comprar ahora</a>
-    <div class="mt-6">
-      <img src="https://cdn.pixabay.com/photo/2020/02/25/11/55/computer-4878382_1280.jpg" alt="Tecnología" class="w-full max-w-3xl mx-auto rounded-lg shadow-lg">
+  <main class="products">
+    <div class="product-card">
+      <img src="audifonos.webp" alt="Audífonos Bluetooth" />
+      <h3>Audífonos Bluetooth</h3>
+      <p>S/. 35.00</p>
+      <a class="buy-button" href="https://wa.me/51969983025?text=Hola%2C%20quiero%20comprar%20Aud%C3%ADfonos%20Bluetooth" target="_blank">Comprar</a>
     </div>
-  </section>
-
-  <!-- Productos -->
-  <section id="productos" class="p-8">
-    <h3 class="text-2xl font-semibold mb-6 text-center">Productos Destacados</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div class="bg-gray-800 rounded-lg p-4 shadow flex flex-col">
-        <img src="https://cdn.pixabay.com/photo/2018/09/17/14/27/headphones-3683983_1280.jpg" class="w-full h-48 object-cover mb-4 rounded" alt="Audífonos">
-        <h4 class="text-xl font-bold mb-2">Audífonos Bluetooth</h4>
-        <p class="mb-3">Sonido envolvente y cancelación de ruido activa.</p>
-        <img src="https://cdn.pixabay.com/photo/2020/06/30/15/57/headphones-5357182_1280.jpg" alt="Audífonos extra" class="w-full h-32 object-cover mb-3 rounded">
-        <a href="https://wa.me/51969983025?text=Me%20interesa%20comprar%20este%20producto." class="btn-primary mt-auto px-4 py-2 rounded inline-block text-center">Comprar</a>
-      </div>
-      <div class="bg-gray-800 rounded-lg p-4 shadow flex flex-col">
-        <img src="https://cdn.pixabay.com/photo/2020/08/27/12/59/ring-light-5521531_1280.jpg" class="w-full h-48 object-cover mb-4 rounded" alt="Aro de luz">
-        <h4 class="text-xl font-bold mb-2">Aro de Luz LED</h4>
-        <p class="mb-3">Ideal para creadores de contenido y videollamadas.</p>
-        <img src="https://cdn.pixabay.com/photo/2020/10/19/09/21/ring-light-5666995_1280.jpg" alt="Aro de luz adicional" class="w-full h-32 object-cover mb-3 rounded">
-        <a href="https://wa.me/51969983025?text=Me%20interesa%20comprar%20este%20producto." class="btn-primary mt-auto px-4 py-2 rounded inline-block text-center">Comprar</a>
-      </div>
-      <div class="bg-gray-800 rounded-lg p-4 shadow flex flex-col">
-        <img src="https://cdn.pixabay.com/photo/2020/06/24/10/24/mobile-5334261_1280.jpg" class="w-full h-48 object-cover mb-4 rounded" alt="Soporte de celular">
-        <h4 class="text-xl font-bold mb-2">Soporte para Celular</h4>
-        <p class="mb-3">Flexible y ajustable para escritorio o auto.</p>
-        <img src="https://cdn.pixabay.com/photo/2022/08/02/11/45/mobile-7359780_1280.jpg" alt="Soporte adicional" class="w-full h-32 object-cover mb-3 rounded">
-        <a href="https://wa.me/51969983025?text=Me%20interesa%20comprar%20este%20producto." class="btn-primary mt-auto px-4 py-2 rounded inline-block text-center">Comprar</a>
-      </div>
+    <div class="product-card">
+      <img src="aro de luz.webp" alt="Aro de Luz para Selfies" />
+      <h3>Aro de Luz para Selfies</h3>
+      <p>S/. 25.00</p>
+      <a class="buy-button" href="https://wa.me/51969983025?text=Hola%2C%20quiero%20comprar%20Aro%20de%20Luz%20para%20Selfies" target="_blank">Comprar</a>
     </div>
-  </section>
-
-  <!-- Pie de página -->
-  <footer class="dark-bg p-6 mt-12 text-center text-sm text-gray-400">
-    <p>© 2025 BaratoStore. Todos los derechos reservados.</p>
+    <div class="product-card">
+      <img src="soporte de celular.webp" alt="Soporte de Celular" />
+      <h3>Soporte de Celular</h3>
+      <p>S/. 10.00</p>
+      <a class="buy-button" href="https://wa.me/51969983025?text=Hola%2C%20quiero%20comprar%20Soporte%20de%20Celular" target="_blank">Comprar</a>
+    </div>
+    <div class="product-card">
+      <img src="mini parlante bluetooth.webp" alt="Mini Parlante Bluetooth" />
+      <h3>Mini Parlante Bluetooth</h3>
+      <p>S/. 30.00</p>
+      <a class="buy-button" href="https://wa.me/51969983025?text=Hola%2C%20quiero%20comprar%20Mini%20Parlante%20Bluetooth" target="_blank">Comprar</a>
+    </div>
+    <div class="product-card">
+      <img src="smart watch.webp" alt="Smartwatch Juvenil" />
+      <h3>Smartwatch Juvenil</h3>
+      <p>S/. 60.00</p>
+      <a class="buy-button" href="https://wa.me/51969983025?text=Hola%2C%20quiero%20comprar%20Smartwatch%20Juvenil" target="_blank">Comprar</a>
+    </div>
+  </main>
+  <footer>
+    <p>Contacto por WhatsApp: <a href="https://wa.me/51969983025">+51 969 983 025</a> | Yape: 969 983 025</p>
+    <p>Esto y muchos más productos a todo el Perú. También productos a pedido del cliente a precios bajos.</p>
   </footer>
 </body>
 </html>
